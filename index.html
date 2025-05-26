@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Celsius and Fahrenheit Converter " />
+  <meta name="description" content="Quadratic Sequence Js " />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Catherine Vu" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +32,7 @@
   />
 
   <link rel="manifest" href="./site.webmanifest" />
-  <title> Celsius and Fahrenheit Converter in JS</title>
+  <title> Quadratic Sequence, in JS</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Celsius and Fahrenheit Converter, in JS</span>
+        <span class="mdl-layout-title">Quadratic Sequence, in JS</span>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -50,5 +50,57 @@
         <img src="/images/st,small,507x507-pad,600x600,f8f8f8.png" alt="laptop image" />
       </div>
       <br>
-      <div class="page-content">Choose To Convert Celsius Or Fahhenheit Or Both.</div>
+      <div class="page-content">Enter Values please!</div>
       </form>
+<!-- Input for coefficient a -->
+<p>Enter value for a (coefficient of n²):</p>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="number" step="any" id="firstNumber" />
+  <label class="mdl-textfield__label" for="firstNumber">a (e.g. 1)</label>
+  <span class="mdl-textfield__error">Input is not a number!</span>
+</div>
+<br />
+
+<!-- Input for coefficient b -->
+<p>Enter value for b (coefficient of n):</p>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="number" step="any" id="secondNumber" />
+  <label class="mdl-textfield__label" for="secondNumber">b (e.g. 2)</label>
+  <span class="mdl-textfield__error">Input is not a number!</span>
+</div>
+<br />
+
+<!-- Input for constant c -->
+<p>Enter value for c (constant):</p>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="number" step="any" id="thirdNumber" />
+  <label class="mdl-textfield__label" for="thirdNumber">c (e.g. 1)</label>
+  <span class="mdl-textfield__error">Input is not a number!</span>
+</div>
+<br />
+
+<!-- Input for number of terms -->
+<p>How many terms?</p>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="number" id="termCount" />
+  <label class="mdl-textfield__label" for="termCount">Number of terms (e.g. 5)</label>
+  <span class="mdl-textfield__error">Input is not a number!</span>
+</div>
+<br />
+
+<!-- Generate button -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+  onclick="generateQuadratic()" type="button">
+  Generate Sequence
+</button>
+
+<!-- Result display -->
+<br />
+<br/>
+<div class="page-content-answer">
+  <div id="result"></div>
+</div>
+</main>
+</div>
+</body>
+</html>
